@@ -48,7 +48,7 @@ void main()
             {
                 // Parent will enter this branch
                 terminatedChild = waitpid(childC, &waitStatus, 0);
-
+///waitpid() suspends execution of the calling process until a child specified by pid argument has changed state
                 if (terminatedChild == childC)
                 {
                     if (waitStatus == 0)

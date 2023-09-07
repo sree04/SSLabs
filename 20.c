@@ -1,20 +1,29 @@
-// Question : Find out the priority of your running program. Modify the priority with nice command.
+// Question : Find out the priority of your running program. Modify the priority with nice command
+//
+#include <unistd.h>
+#include <stdio.h>
+#include<sys/time.h>
+#include<sys/resource.h>
+#include<stdlib.h>
 
-#include <unistd.h> // Import for `nice` system call
-#include <stdio.h>  // Import for `printf` function
-#include <stdlib.h> // `atoi` conversion from string to int
-
-void main(int argc, char *argv[])
+int main()
 {
-    int priority, newp;
-    if (argc != 2)
-        printf("Please pass the integer value to be added to the current nice value\n");
-    else
-    {
-        newp = atoi(argv[1]);
-        priority = nice(0); // Get the priorty by adding 0 to current priorty
-        printf("Current priority: %d\n", priority);
-        priority = nice(newp); // Adds `newp` to the current priority
-        printf("New priority: %d\n", priority);
-    }
+	int niceV;
+	int pid=getpid();
+
+
+	niceV= getpriority(PRIO_PROCESS,0);
+	printf("pid : %d, nice : %d\n", pid,niceV);
+
+	getchar();
+
+
+	nice(5);// incrementing the proces's nice number by 5
+
+	niceV=getpriority(PRIO_PROCESS,0);
+	printf("pid :%d , nice : %d\n",pid,niceV);
+
+	while(1);
+	return 0;
 }
+

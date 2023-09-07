@@ -22,8 +22,8 @@ void main()
     {
         // Only child process can enter this branch
         printf("Child PID: %d\n", getpid());
-        printf("Putting child to sleep for 100s!\n");
-        sleep(100); // Put the child process to sleep for 12s
+        printf("Putting child to sleep for 12s!\n");
+        sleep(12); // Put the child process to sleep for 12s
         printf("Child is now awake!\n");
     }
 }

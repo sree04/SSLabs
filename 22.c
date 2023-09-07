@@ -7,11 +7,11 @@
 
 void main()
 {
-    char *filename = "./sample-files/pgm-22-sample.txt";
+    char *filename = "./22_text.txt";
     int childPid, fileDescriptor;
     fileDescriptor = open(filename, O_CREAT | O_WRONLY | O_APPEND, S_IRWXU);
 
-    if ((childPid = fork()) != 0) // Only parent can enter this branch
+    if ( fork() != 0) // Only parent can enter this branch
         write(fileDescriptor, "Parent\n!", 7);
     else // Only child can enter this branch
         write(fileDescriptor, "Child\n!", 6);

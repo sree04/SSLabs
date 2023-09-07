@@ -10,18 +10,20 @@ void main()
 
     if ((childPid = fork()) != 0)
     {
-        // Only creator process can enter this branch
+      
         printf("Parent PID: %d\n", getpid());
         printf("Putting parent to sleep for 100s!\n");
-        sleep(100); // Put the creator process to sleep for 100s
-        printf("Parent is now awake!\n");
+        sleep(60); // Put the calling  process to sleep for 60s
+        printf("calling process  is now awake!\n");
     }
     else
     {
         // Only child process can enter this branch
         printf("Child PID: %d\n", getpid());
         printf("Exiting child!\n");
-        _exit(0); // Terminate the child process
-        // The above exit causes the child to exit while the parent is asleep, hence won't be able to send the exit signal to the parent & ends up becoming a zombie
-    }
+        _exit(0); //immediate  terminate the child process
+       // we called fork cmd to create a child process,since parent and child both run simultaneously 
+       //    we set the parent to sleep and child to exit immediately when parent process is sleeping.the child process sends the exit code which the parent is unable to check and zombie process is created.
+       //
+       }
 }

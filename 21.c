@@ -8,13 +8,14 @@ void main()
 {
     int childPid, pid;
 
-    pid = getpid();
+    pid = getpid();// to get the pid of the calling process
 
-    printf("Parent PID: %d\n", pid);
+    
+   if (fork()!=0)
+     printf("Parent PID: %d\n", pid);
+     else 
+	     childPid=getpid();
+	     printf("Child pid = %d\n",childPid);
 
-    childPid = fork();
-
-    if (childPid != 0)
-        // Only parent will enter this branch
-        printf("Child PID: %d\n", childPid);
 }
+
