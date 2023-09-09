@@ -17,7 +17,7 @@ void main(int argc, char *argv[])
         printf("Pass the file to be read as the argumentn");
     else
     {
-        filename = argv[2];
+        filename = argv[1];
         fileDescriptor = open(filename, O_RDONLY);
 
         if (fileDescriptor == -1)

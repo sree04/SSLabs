@@ -1,5 +1,5 @@
 // Question: Write a program to open a file, duplicate the file descriptor and append the file with both the descriptors and check whether the file is updated properly or not using `dup`
-
+ 
 #include <unistd.h>    // Import for `dup` system call
 #include <sys/types.h> // Import for `open` system call
 #include <sys/stat.h>  // Import for `open` system call

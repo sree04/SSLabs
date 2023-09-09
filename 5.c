@@ -8,10 +8,13 @@ void main()
 {
     while (1)
     {
-        creat("./sample-files/file_1", O_CREAT);
+        creat("./sample-files/file_1", O_CREAT); wait(5);
+        
         creat("./sample-files/file_2", O_CREAT);
         creat("./sample-files/file_3", O_CREAT);
         creat("./sample-files/file_4", O_CREAT);
         creat("./sample-files/file_5", O_CREAT);
     }
 }
+
+//change the directory to proc then write cat/proc/pid of this process while it is running in background /status

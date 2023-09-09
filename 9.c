@@ -3,13 +3,22 @@
 #include<sys/stat.h>
 
 int main(void)
-{
-	struct stat s;
-	stat("select.c" ,&s);
-	printf("Select. c inode number:%d\n",s.st_ino);
-	printf("select . c no of hard links:%ld\n",s.st_nlink);
-	printf("select. c uid:%ld\n",s.st_uid);
-	printf("select.  c gid:%ld\n",s.st_gid);
-	printf("select. c no of blocks:%ld\n",s.st_blocks);
-	printf("select .c block size:%ld\n",s.st_blksize);
-}
+{	
+	char fpath[]="9.txt";
+	struct stat fileinfo;
+	
+	 if(stat(fpath, &fileinfo)==0) //file path name and address of the struct stat typed variable
+	 {
+	        printf("Inode is:%lu\n",fileinfo.st_ino);
+	        printf("no. of hard links is:%lu\n",fileinfo.st_nlink);
+	        printf("UID :%u\n",fileinfo.st_uid);
+		 printf("GID :%u\n",fileinfo.st_gid);
+		 printf("Size is :%ld\n",fileinfo.st_size);
+	        printf("Block is :%ld\n",fileinfo.st_blocks);
+		 printf("Block Size is :%ld\n",fileinfo.st_blksize);
+		  printf("Time of last access :%ld\n",fileinfo.st_atime);
+		printf("Time of last modification :%ld\n",fileinfo.st_mtime);
+	       printf("Time of last change :%ld\n",fileinfo.st_ctime);
+	}
+    
+       }

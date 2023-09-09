@@ -1,3 +1,5 @@
+//Write a program to open an existing file with read write mode. Try O_EXCL flag also.
+
 #include<stdio.h>
 #include<sys/stat.h>
 #include<sys/types.h>
@@ -16,7 +18,7 @@ int main(int argc,char *argv[]){
 	{
 		filename=argv[1];
 
-		fileDes=open(filename,O_RDWR);
+		fileDes=open(filename,O_RDWR | O_EXCL,0600);//user is given permmission to read n write
 
 		if(fileDes == -1)
 			perror("enter while opening the file");

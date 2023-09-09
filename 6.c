@@ -7,10 +7,10 @@ void main()
 {
     char *buffer[100];
     int readByteCount, writeByteCount;
-    while (1)
+    while (1)//this program will continuously 
     {
-        readByteCount = read(STDIN_FILENO, buffer, 1);
-        writeByteCount = write(STDOUT_FILENO, buffer, 1);
+        readByteCount = read(STDIN_FILENO, buffer, 1);// the no of bytes actually read from std input
+        writeByteCount = write(STDOUT_FILENO, buffer, 1);//to check if write op was successful and to handle errors
 
         if (readByteCount == -1 || writeByteCount == -1)
         {

@@ -28,7 +28,7 @@ void main(int argc, char *argv[])
             perror("Error while opening file! ");
         else
         {
-            offset = lseek(fileDescriptor, 10, SEEK_SET); // Move forward 10 bytes from start of the file
+            // Move forward 10 bytes from start of the file
             writeByteCount = write(fileDescriptor, "ABCDEFGHIJ", 10);
             if (writeByteCount == -1)
             {

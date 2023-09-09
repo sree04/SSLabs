@@ -23,16 +23,17 @@ void main(int argc, char *argv[])
         printf("Pass the source & destination file name as the argument\n");
     else
     {
-        sourcePath = argv[1];
-        destinationPath = argv[2];
+        sourcePath = argv[1];//stores the source file path
+        destinationPath = argv[2];//stores the destination path
 
-        // Open source file in read only mode
+        // Open source file in read only mode and fd is stored
         sourceFD = open(sourcePath, O_RDONLY);
+        
         // Create destination file if it doesn't exist and open in read-write mode
         // Give the user all the permissions
         destinationFD = open(destinationPath, O_CREAT | O_RDWR, S_IRWXU);
 
-        if (sourceFD == -1 || destinationFD == -1)
+        if (sourceFD == -1 || destinationFD == -1)//when we dont find either source or destination fd
         {
             perror("Error while opening source / destination file");
             _exit(1);
