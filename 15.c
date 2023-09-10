@@ -1,19 +1,15 @@
 // Question : Write a program to display the environmental variable of the user (use environ).
 
-#include <stdio.h> // Import for `NULL`, `environ`
+#include <unistd.h>
+#include <stdio.h>
 
 extern char **environ;
 
-int isUser(char *var)
-{
-    return var[0] == 'U' && var[1] == 'S' && var[4] == '=';
+int main(){
+int i = 0;
+while(environ[i]) {
+  printf("%s\n", environ[i++]);
 }
-
-void main()
-{
-    int iter = -1;
-    while (environ[++iter] != NULL)
-        if (isUser(environ[iter]))
-            printf("%s\n", environ[iter]);
+return 0;
 }
 
