@@ -1,3 +1,4 @@
+//Hands on list 2 || Name:Sreeparna Das || Roll No.-MT2023006 || Submission Date:14/10/2023
 //22. Write a program to wait for data to be written into FIFO within 10 seconds, use select system call with FIFO.
 #include <sys/types.h> // Import for `open`, `select`
 #include <sys/stat.h>  // Import for `open`

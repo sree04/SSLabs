@@ -1,3 +1,5 @@
+//Hands on list 2 || Name:Sreeparna Das || Roll No.-MT2023006 || Submission Date:14/10/2023
+
 //25. Write a program to print a message queue's (use msqid_ds and ipc_perm structures)
 // a. access permission
 // b. uid, gid

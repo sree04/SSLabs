@@ -1,3 +1,6 @@
+//Hands on list 2 || Name:Sreeparna Das || Roll No.-MT2023006 || Submission Date:14/10/2023
+
+
 //29. Write a program to remove the message queue.
 
 
