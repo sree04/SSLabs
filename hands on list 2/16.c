@@ -1,3 +1,5 @@
+//Hands on list 2 || Name:Sreeparna Das || Roll No.-MT2023006 || Submission Date:14/10/2023
+
 //16. Write a program to send and receive data from parent to child vice versa. Use two way communication.
 
 #include <stdio.h>

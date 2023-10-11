@@ -1,3 +1,5 @@
+//Hands on list 2 || Name:Sreeparna Das || Roll No.-MT2023006 || Submission Date:14/10/2023
+
 //15. Write a simple program to send some data from parent to the child process
 
 #include <stdio.h>
