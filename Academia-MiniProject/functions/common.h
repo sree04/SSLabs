@@ -14,6 +14,7 @@
 #include "../record-struct/account.h"
 #include "../record-struct/customer.h"
 #include "../record-struct/transaction.h"
+#include "../record-struct/faculty.h"
 
 #include "../record-struct/student.h"
 

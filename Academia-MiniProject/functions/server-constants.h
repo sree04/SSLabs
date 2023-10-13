@@ -15,6 +15,7 @@
 // GET ACCOUNT DETAILS
 
 #define GET_STUDENT_ID "Enter Student ID: "
+#define GET_Faculty_ID "Enter Faculty ID: "
 #define GET_ACCOUNT_NUMBER "Enter the account number of the account you're searching for"
 #define GET_CUSTOMER_ID "Enter the customer ID of the customer you're searching for"
 
@@ -25,8 +26,9 @@
 
 #define STUDENT_ID_DOESNT_EXIT "No STUDENT could be found for the given ID"
 
+#define FACULTY_ID_DOESNT_EXIT "No FACULTY could be found for the given ID"
+
 #define CUSTOMER_ID_DOESNT_EXIT "No STUDENT could be found for the given ID"
-#define STUDENT_ID_DOESNT_EXIT "No STUDENT could be found for the given ID"
 #define CUSTOMER_LOGIN_ID_DOESNT_EXIT "No customer could be found for the given login ID$"
 
 #define ACCOUNT_ID_DOESNT_EXIT "No account could be found for the given account number"
@@ -50,6 +52,11 @@
 #define ADMIN_ADD_STUDENT_EMAIL "Enter Email : "
 #define ADMIN_ADD_STUDENT_ADDRESS "Enter Address : "
 
+#define ADMIN_ADD_FACULTY_NAME "Enter Name : "
+#define ADMIN_ADD_DESTINATION "Enter Designation : "
+#define ADMIN_ADD_FACULTY_EMAIL "Enter Email : "
+#define ADMIN_ADD_FACULTY_ADDRESS "Enter Address : "
+
 #define ADMIN_ADD_CUSTOMER_PRIMARY "Enter the details for the primary customer\n"
 #define ADMIN_ADD_CUSTOMER_SECONDARY "Enter the details for the secondary customer\n"
 #define ADMIN_ADD_CUSTOMER_NAME "What is the customer's name?"
@@ -72,7 +79,7 @@
 
 // MODIFY STUDENT INFO
 #define ADMIN_MOD_STUDENT_ID "Enter the ID of the STUDENT who's information you want to edit"
-#define ADMIN_MOD_STUDENT_MENU "Which information would you like to modify?\n1. Name 2. Age 3. Email 4. Address 3. Email\nPress any other key to cancel"
+#define ADMIN_MOD_STUDENT_MENU "Which information would you like to modify?\n1. Name 2. Age 3. Email 4. Address\nPress any other key to cancel"
 #define ADMIN_MOD_STUDENT_NEW_NAME "What's the updated value for name?"
 #define ADMIN_MOD_STUDENT_NEW_EMAIL "What's the updated value for email?"
 #define ADMIN_MOD_STUDENT_NEW_ADDRESS "What's the updated value for address?"
@@ -129,5 +136,5 @@
 #define TRANSACTION_FILE "./records/transactions.bank"
 
 #define STUDENT_FILE "./records/students"
-
+#define FACULTY_FILE "./records/faculty"
 #endif
